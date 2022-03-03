@@ -1,0 +1,45 @@
+{
+    "name": "fabpl/zephyr",
+    "description": "Minimal Laravel authentication and profile management scaffolding with Blade, Tailwind, Alpine and Livewire.",
+    "keywords": [
+        "laravel",
+        "auth"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/fabpl/zephyr/issues",
+        "source": "https://github.com/fabpl/zephyr"
+    },
+    "authors": [
+        {
+            "name": "Fabrice Planchette",
+            "email": "planchettefabrice@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/filesystem": "^8.42|^9.0",
+        "illuminate/support": "^8.42|^9.0",
+        "illuminate/validation": "^8.42|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fabpl\\Zephyr\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Fabpl\\Zephyr\\ZephyrServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
