@@ -4,11 +4,11 @@
 
 Zephyr provides a minimal and simple starting point for building a Laravel application with authentication and user profile management. 
 
-Zephyr is powered by Blade, Tailwind, Alpine and Livewire.
+Zephyr is powered by Blade, Tailwind, and Alpine.
 
 ## Installation
 
-First, you should [create a new Laravel application](https://laravel.com/docs/9.x/installation), configure your database, and run your database migrations:
+First, you should [create a new Laravel application](https://laravel.com/docs), configure your database, and run your database migrations:
 
 ```bash
 curl -s https://laravel.build/example-app | bash
@@ -30,9 +30,6 @@ After Zephyr is installed, you should also compile your assets so that your appl
 
 ```bash
 php artisan zephyr:install
-
-npm install
-npm run dev
 php artisan migrate
 ```
 

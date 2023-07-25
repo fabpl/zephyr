@@ -1,35 +1,38 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Fabpl\Zephyr;
 
+use Fabpl\Zephyr\Console\InstallCommand;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class ZephyrServiceProvider extends ServiceProvider implements DeferrableProvider
+final class ZephyrServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Bootstrap any application services.
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        if (! $this->app->runningInConsole()) {
+        if ( ! $this->app->runningInConsole()) {
             return;
         }
 
         $this->commands([
-            Console\InstallCommand::class,
+            InstallCommand::class,
         ]);
     }
 
     /**
      * Get the services provided by the provider.
      *
-     * @return array
+     * @return array<int, string>
      */
-    public function provides()
+    public function provides(): array
     {
-        return [Console\InstallCommand::class];
+        return [InstallCommand::class];
     }
 }

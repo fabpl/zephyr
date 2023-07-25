@@ -1,0 +1,17 @@
+parameters:
+
+    paths:
+        - app/
+
+    level: 9
+
+    ignoreErrors:
+        - '#Method App\\Http\\Middleware\\RedirectIfAuthenticated::handle\(\) should return Symfony\\Component\\HttpFoundation\\Response but returns Illuminate\\Http\\RedirectResponse|Illuminate\\Routing\\Redirector.#'
+        - '#Method .*::render\(\) should return Illuminate\\View\\View but returns Illuminate\\Contracts\\View\\Factory|Illuminate\\Contracts\\View\\View.#'
+        - '#Parameter \#1 \$key of function __ expects string\|null, mixed given.#'
+
+    excludePaths:
+
+    checkGenericClassInNonGenericObjectType: false
+
+    checkMissingIterableValueType: false
